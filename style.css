@@ -1,11 +1,8 @@
 /*styles go here*/
 
-/*p {
-    color: red;
-}*/
 
 p {
-	color: #666666;
+	color: #212121;
     font-family: "Roboto", Arial, sans-serif;
 }
 
@@ -33,7 +30,7 @@ h1 {
 #nav a:link, a:visited {
 	display:block;
     color: #ffffff;
-    background-color: #98bf21;
+    background-color: #21bcbf;
     font-weight: bold;
     text-align:center;
     text-decoration: none;
@@ -42,7 +39,7 @@ h1 {
 }
 
 #nav a:hover, a:active {
-    background-color: #7a991a;
+    background-color: #168082;
 }
 
 .caption {
@@ -63,4 +60,57 @@ h1 {
 
 img {
 	border: none; 
+}
+
+/*Below this is all for flex*/
+
+@media (min-width:800px){
+
+#nav {
+    display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+#nav a{
+  border-top:none;
+  border-bottom:none;
+}
+#nav a:hover{
+  background:black;
+}
+
+.first {
+  margin-right: auto;
+}
+
+.main{
+  display:flex;
+  flex-flow:row;
+}
+
+img{
+  width:50%;
+  height:200px;
+  margin-right:10px;
+}
+
+
+
+/*Tell the browser to work with flex*/
+.wrapper{
+  display: flex;
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
+}
+
+.header, .main, .aside, .footer{
+  flex: 1 100%;
+  padding: 10px;
+}
+
+body {
+  padding: 2em;
+}
+
 }
